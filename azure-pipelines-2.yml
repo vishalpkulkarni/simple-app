@@ -20,25 +20,25 @@ steps:
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OpenShiftARO'
+    openshiftService: 'OpenShiftCRC'
     cmd: 'oc project myapp'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OpenShiftARO'
+    openshiftService: 'OpenShiftCRC'
     cmd: 'oc new-app https://github.com/vishalpkulkarni/simple-app.git'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OpenShiftARO'
+    openshiftService: 'OpenShiftCRC'
     cmd: 'oc expose svc simple-app'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OpenShiftARO'
+    openshiftService: 'OpenShiftCRC'
     cmd: 'oc start-build simple-app --follow'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OpenShiftARO'
+    openshiftService: 'OpenShiftCRC'
     cmd: 'oc status'
